@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CAFÉ & CIA — Café artesanal em Curitiba</title>
+<meta name="description" content="Café & Cia: cafés especiais, comida artesanal e um ambiente acolhedor no Centro de Curitiba.">
+<meta property="og:title" content="CAFÉ & CIA — Café artesanal em Curitiba">
+<meta property="og:description" content="Grãos selecionados, sabores marcantes e um lugar para ficar.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Café & Cia","telephone":"(41) 99999-9999","address":{"@type":"PostalAddress","streetAddress":"Rua das Flores, 245","addressLocality":"Curitiba","addressRegion":"PR"}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf3e7;--bg2:#f1e4cd;--fg:#2a1a12;--mut:#6d5646;--card:#fffaf1;--car:#a45a1f;--ol:#5f6d2f;--gold:#c9a14a;--dark:#24150e;--cr:#faf3e7;--hf:'Fraunces',Georgia,serif;--bf:'Inter',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1b110b;--bg2:#24160f;--fg:#f6ead6;--mut:#cdb89e;--card:#2b1b12;--car:#e0954f;--ol:#a9b86a}}
+:root[data-theme=dark]{--bg:#1b110b;--bg2:#24160f;--fg:#f6ead6;--mut:#cdb89e;--card:#2b1b12;--car:#e0954f;--ol:#a9b86a}
+html{height:100%;scroll-behavior:smooth;scroll-padding-top:76px;scroll-padding-bottom:0;padding-top:0}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.02rem/1.65 var(--bf);overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--hf);font-weight:600;line-height:1.12;margin:0 0 .5em;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.1rem)}p{margin:0 0 1em}a{color:inherit}
+svg{display:block}
+.w{width:min(1180px,calc(100% - 40px));margin:auto}
+section{padding:clamp(64px,9vw,116px) 0}
+.eb{display:block;font:600 .74rem var(--bf);letter-spacing:.18em;text-transform:uppercase;color:var(--car);margin-bottom:14px}
+.mut{color:var(--mut)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 26px;border-radius:999px;border:1.5px solid var(--car);background:var(--car);color:#fff;font:600 .95rem var(--bf);text-decoration:none;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px #0003}.btn:active{transform:none}
+.btn.o{background:transparent;color:inherit;border-color:currentColor}.btn.o:hover{background:#ffffff1c}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.rv{transition:opacity .7s,transform .7s}.js .rv{opacity:0;transform:translateY(24px)}.js .rv.in{opacity:1;transform:none}
+/* header */
+.hd{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);color:var(--cr);transition:background .35s,box-shadow .35s}
+.hd.s{background:#24150ef0;backdrop-filter:blur(10px);box-shadow:0 6px 24px #0004}
+.hd .w{display:flex;align-items:center;justify-content:space-between;height:74px;transition:height .3s}.hd.s .w{height:62px}
+.logo{font:600 1.35rem var(--hf);letter-spacing:.06em;text-decoration:none}.logo b{color:var(--gold)}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;font-size:.92rem;position:relative;padding:6px 0}
+nav a:not(.btn)::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:.3s}
+nav a:not(.btn):hover::after{transform:scaleX(1)}
+nav .btn{min-height:42px;padding:0 20px}.mo{display:none}
+.bg{display:none;width:48px;height:48px;background:none;border:0;color:inherit;cursor:pointer;z-index:2}
+.bg i{display:block;width:24px;height:2px;background:currentColor;margin:6px auto;transition:.3s}
+.open .bg i:nth-child(1){transform:translateY(8px) rotate(45deg)}.open .bg i:nth-child(2){opacity:0}.open .bg i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media(max-width:900px){.bg{display:block}.hc{display:none}.mo{display:block}
+nav ul{position:fixed;top:0;right:0;bottom:0;width:min(82vw,330px);flex-direction:column;align-items:flex-start;gap:22px;background:var(--dark);padding:96px 32px;transform:translateX(105%);transition:transform .4s cubic-bezier(.2,.8,.2,1);box-shadow:-10px 0 40px #0006}
+.open nav ul{transform:none}nav a{font-size:1.15rem}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:var(--cr);background:var(--dark);overflow:hidden;padding:120px 0 90px}
+.hero>.art{position:absolute;inset:0;width:100%;height:100%}.hero>.art svg{width:100%;height:100%}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#1b0f09 8%,#1b0f09b0 48%,#1b0f0930)}
+.hero .w{position:relative;z-index:2}.hero .c{max-width:620px}
+.hero h1{font-size:clamp(2.6rem,6.6vw,5rem);margin:.2em 0 .35em}.hero h1 em{color:var(--gold);font-style:italic}
+.hero p.l{font-size:1.12rem;color:#eadbc3;max-width:520px}
+.bs{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.hero .c>*{animation:up .9s both cubic-bezier(.2,.8,.2,1)}.hero .c>:nth-child(2){animation-delay:.12s}.hero .c>:nth-child(3){animation-delay:.24s}.hero .c>:nth-child(4){animation-delay:.36s}
+@keyframes up{from{opacity:0;transform:translateY(30px)}}
+.sc{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:#eadbc3;text-align:center;text-decoration:none}
+.sc::after{content:'';display:block;width:2px;height:34px;background:linear-gradient(var(--gold),transparent);margin:8px auto 0;animation:dr 1.8s infinite}
+@keyframes dr{50%{transform:translateY(8px);opacity:.4}}
+/* highlights */
+.hl{background:var(--dark);color:var(--cr);padding:34px 0}
+.hl ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.hl li{display:flex;align-items:center;gap:14px;font-weight:500}
+.hl svg{width:40px;height:40px;flex:none;padding:9px;border:1.5px solid var(--gold);border-radius:50%;stroke:var(--gold);fill:none;stroke-width:1.6}
+/* story */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,90px);align-items:center}
+.md{position:relative;padding-bottom:40px}.md .a1{border-radius:26px;overflow:hidden;aspect-ratio:4/5}
+.md .a2{position:absolute;right:-28px;bottom:0;width:48%;aspect-ratio:1;border-radius:22px;overflow:hidden;border:8px solid var(--bg);box-shadow:0 18px 40px #0003}
+.art,.art svg{width:100%;height:100%}.art svg{object-fit:cover}
+.sts{display:flex;gap:34px;margin:26px 0 30px}.sts b{display:block;font:600 2.6rem/1 var(--hf);color:var(--car)}.sts span{font-size:.9rem;color:var(--mut)}
+/* menu */
+.mn{background:var(--bg2)}.hd2{text-align:center;max-width:640px;margin:0 auto 38px}
+.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:38px}
+.tabs button{min-height:46px;padding:0 24px;border-radius:999px;border:1.5px solid var(--car);background:transparent;color:var(--fg);font:500 .95rem var(--bf);cursor:pointer;transition:.25s}
+.tabs button:hover{background:#a45a1f22}.tabs button[aria-selected=true]{background:var(--car);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;animation:fd .45s}
+@keyframes fd{from{opacity:0;transform:translateY(12px)}}
+.card{background:var(--card);border-radius:20px;overflow:hidden;box-shadow:0 4px 18px #2a1a1214;transition:transform .3s,box-shadow .3s;text-align:left;border:0;padding:0;color:inherit;font:inherit;cursor:pointer;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 36px #2a1a1226}
+.card .im{aspect-ratio:4/3;overflow:hidden}.card .im svg{transition:transform .6s}.card:hover .im svg{transform:scale(1.07)}
+.card .b{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1;gap:4px}
+.card h3{font-size:1.2rem;margin:0}.card p{font-size:.9rem;color:var(--mut);margin:0 0 10px;flex:1}
+.card .f{display:flex;justify-content:space-between;align-items:center}.pr{font:600 1.1rem var(--hf);color:var(--car)}
+.pl{width:40px;height:40px;border-radius:50%;background:var(--car);color:#fff;display:grid;place-items:center;font-size:1.4rem;transition:transform .3s}.card:hover .pl{transform:rotate(90deg)}
+/* dialogs */
+dialog{border:0;padding:0;background:var(--card);color:var(--fg);border-radius:24px;width:min(760px,calc(100% - 24px));max-height:calc(100dvh - 24px);overflow:auto;box-shadow:0 30px 80px #0007}
+dialog::backdrop{background:#150b06cc;backdrop-filter:blur(3px)}dialog[open]{animation:pop .3s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{opacity:0;transform:scale(.95) translateY(14px)}}
+.x{position:absolute;top:12px;right:12px;width:46px;height:46px;border-radius:50%;border:0;background:#24150ecc;color:#fff;font-size:1.5rem;cursor:pointer;z-index:3}
+.mg{display:grid;grid-template-columns:1fr 1fr}.mg .im{min-height:340px}.mg .tx{padding:44px 32px 32px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.tg{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 18px}.tg span{font-size:.75rem;padding:4px 12px;border-radius:99px;background:var(--bg2)}
+/* cafe do dia */
+.cd{background:var(--dark);color:var(--cr)}.cd .two{gap:clamp(30px,6vw,80px)}
+.sw{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:1;max-height:560px}
+.st span{position:absolute;bottom:52%;width:16px;height:90px;border-radius:50%;background:linear-gradient(#fff9,transparent);filter:blur(9px);opacity:0;animation:sm 3.4s infinite ease-in}
+.st span:nth-child(1){left:42%}.st span:nth-child(2){left:50%;animation-delay:1s}.st span:nth-child(3){left:58%;animation-delay:2s}
+@keyframes sm{0%{opacity:0;transform:translateY(20px) scaleX(.8)}30%{opacity:.7}100%{opacity:0;transform:translateY(-90px) scaleX(1.6)}}
+.cd .pr{font-size:2rem;color:var(--gold);display:block;margin:12px 0 24px}
+.bd{display:inline-block;background:var(--gold);color:#2a1a12;font:600 .72rem var(--bf);letter-spacing:.16em;padding:6px 14px;border-radius:99px;margin-bottom:18px}
+/* experience */
+.cs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ex{background:var(--card);border-radius:22px;padding:32px 26px;border:1px solid #c9a14a44;transition:transform .35s,box-shadow .35s,background .35s}
+.ex:hover{transform:translateY(-8px);box-shadow:0 20px 40px #2a1a1220;background:var(--bg2)}
+.ex .ic{font-size:2rem;width:62px;height:62px;display:grid;place-items:center;border-radius:18px;background:var(--bg2);margin-bottom:18px;transition:transform .35s}.ex:hover .ic{transform:rotate(-8deg) scale(1.1);background:var(--card)}
+.ex h3{font-size:1.25rem}.ex p{color:var(--mut);margin:0}
+/* process */
+.pc{background:var(--bg2)}.pc ol{list-style:none;margin:50px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.pc ol::before{content:'';position:absolute;top:27px;left:12%;right:12%;border-top:2px dashed var(--car)}
+.pc li{text-align:center;position:relative}.pc li b{display:grid;place-items:center;width:56px;height:56px;margin:0 auto 18px;border-radius:50%;background:var(--car);color:#fff;font:600 1.05rem var(--hf);box-shadow:0 0 0 8px var(--bg2)}
+.pc li h3{font-size:1.3rem}.pc li p{color:var(--mut)}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:12px;grid-auto-flow:dense;margin-top:40px}
+.gal button{position:relative;padding:0;border:0;border-radius:18px;overflow:hidden;cursor:zoom-in;background:var(--bg2)}
+.gal .a{grid-column:span 2;grid-row:span 2}.gal .b{grid-row:span 2}
+.gal svg{transition:transform .6s}.gal button:hover svg{transform:scale(1.06)}
+.gal button::after,.ig a::after{content:'';position:absolute;inset:0;background:#1b0f09;opacity:0;transition:.3s}
+.gal button:hover::after,.gal button:focus-visible::after{opacity:.4}
+.zm{position:absolute;inset:0;display:grid;place-items:center;z-index:2;opacity:0;transition:.3s;pointer-events:none}.zm svg{width:34px;height:34px;stroke:#fff;fill:none;stroke-width:2}
+.gal button:hover .zm,.gal button:focus-visible .zm,.ig a:hover .zm{opacity:1}
+#lb{width:min(980px,calc(100% - 20px));background:#150b06;color:#fff;overflow:hidden}
+#lb .im{aspect-ratio:4/3;max-height:74dvh;width:100%}#lb p{margin:0;padding:14px 70px;text-align:center}
+.nv{position:absolute;top:calc(50% - 30px);width:48px;height:48px;border-radius:50%;border:0;background:#faf3e7dd;color:#2a1a12;font-size:1.4rem;cursor:pointer;z-index:3}.nv.p{left:12px}.nv.n{right:12px}
+/* testimonials */
+.tt{text-align:center}.tr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:36px}.tr::-webkit-scrollbar{display:none}
+.tr figure{flex:0 0 100%;scroll-snap-align:center;margin:0;padding:0 4px}
+.tq{max-width:720px;margin:auto;background:var(--card);border-radius:26px;padding:38px clamp(22px,5vw,52px);border:1px solid #c9a14a44}
+.stars{color:var(--gold);letter-spacing:4px;font-size:1.2rem}.tq blockquote{font:500 clamp(1.15rem,2.4vw,1.5rem)/1.5 var(--hf);margin:14px 0 22px}
+.au{display:flex;align-items:center;justify-content:center;gap:12px;font-weight:600}.au svg{width:48px;height:48px;border-radius:50%}
+.dots{display:flex;gap:10px;justify-content:center;align-items:center;margin-top:24px}
+.dots button{width:12px;height:12px;border-radius:50%;border:0;background:#a45a1f55;padding:0;cursor:pointer;transition:.3s;position:relative}.dots button::before{content:'';position:absolute;inset:-14px}
+.dots button[aria-current=true]{background:var(--car);width:30px;border-radius:99px}
+.ar{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--car);background:none;color:var(--fg);cursor:pointer;font-size:1.2rem}
+/* insta */
+.ig{background:var(--bg2);text-align:center}.ig .grid6{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:36px 0}
+.ig a{position:relative;aspect-ratio:1;border-radius:16px;overflow:hidden;display:block}.ig a svg{transition:transform .5s}.ig a:hover svg{transform:scale(1.1)}.ig a:hover::after{opacity:.5}
+.zm svg.i{width:30px;height:30px}
+/* location */
+.hr{width:100%;border-collapse:collapse;margin:20px 0}.hr td{padding:12px 0;border-bottom:1px solid #c9a14a55}.hr td:last-child{text-align:right;font-weight:600}
+.map{border-radius:26px;overflow:hidden;min-height:380px;box-shadow:0 14px 40px #2a1a1222}.map svg{width:100%;height:100%;min-height:380px}
+/* cta */
+.cta{position:relative;color:var(--cr);text-align:center;background:var(--dark);overflow:hidden;padding:clamp(90px,12vw,150px) 0}
+.cta>.art{position:absolute;inset:0}.cta::after{content:'';position:absolute;inset:0;background:#1b0f09d0}.cta .w{position:relative;z-index:2}.cta .bs{justify-content:center}
+footer{background:#160d08;color:#d9c7ab;padding:60px 0 30px;font-size:.95rem}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}footer h4{color:var(--gold);font:600 .78rem var(--bf);letter-spacing:.16em;text-transform:uppercase;margin:0 0 14px}
+footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:8px}footer a{text-decoration:none}footer a:hover{color:var(--gold)}
+.cp{border-top:1px solid #ffffff1c;margin-top:36px;padding-top:22px;font-size:.85rem}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--dark);color:var(--cr);padding:14px 24px;border-radius:99px;opacity:0;pointer-events:none;transition:.35s;z-index:99;border:1px solid var(--gold)}.toast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1000px){.cs,.pc ol{grid-template-columns:repeat(2,1fr)}.pc ol::before{display:none}.ig .grid6{grid-template-columns:repeat(3,1fr)}.hl ul{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.two,.mg,.fg{grid-template-columns:1fr}.md{margin-right:20px}.md .a2{right:-20px}.mg .im{min-height:0;aspect-ratio:16/10}.cs{grid-template-columns:1fr}
+.pc ol{grid-template-columns:1fr;gap:34px;padding-left:0}.pc ol::before{display:block;top:28px;bottom:28px;left:27px;right:auto;border-top:0;border-left:2px dashed var(--car)}
+.pc li{text-align:left;padding-left:82px}.pc li b{position:absolute;left:0;top:0;margin:0}
+.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.gal .b{grid-row:span 1}.gal button:nth-child(8){grid-column:span 2}
+.hero::after{background:linear-gradient(180deg,#1b0f09aa,#1b0f09ee)}.hero .btn,.cta .btn{flex:1 1 100%}.sc{display:none}.hero{padding-bottom:60px}
+.hl ul{grid-template-columns:1fr 1fr;gap:18px 10px}.hl li{flex-direction:column;text-align:center;font-size:.9rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="hd" id="hd"><div class="w">
+<a class="logo" href="#inicio" aria-label="Café & Cia, início">CAFÉ <b>&amp;</b> CIA</a>
+<nav id="nav" aria-label="Principal"><ul id="mn">
+<li><a href="#inicio">Início</a></li><li><a href="#historia">Nossa História</a></li><li><a href="#cardapio">Cardápio</a></li><li><a href="#experiencia">Experiência</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#contato">Contato</a></li>
+<li class="mo"><a class="btn" href="#cardapio">Ver cardápio</a></li></ul></nav>
+<a class="btn hc" href="#cardapio">Ver cardápio</a>
+<button class="bg" id="bg" aria-label="Abrir menu" aria-expanded="false" aria-controls="mn"><i></i><i></i><i></i></button>
+</div></header>
+<main>
+<section class="hero" id="inicio" style="padding:120px 0 90px">
+<div class="art" id="heroArt" aria-hidden="true"></div>
+<div class="w"><div class="c">
+<span class="eb" style="color:var(--gold)">Café artesanal • Momentos especiais</span>
+<h1>Seu momento começa <em>com um bom café.</em></h1>
+<p class="l">Grãos selecionados, sabores marcantes e um ambiente feito para transformar pequenas pausas em momentos especiais.</p>
+<div class="bs"><a class="btn" href="#cardapio">Ver nosso cardápio</a><a class="btn o" href="#historia">Conheça a cafeteria</a></div>
+</div></div>
+<a class="sc" href="#destaques">Role para descobrir</a>
+</section>
+
+<div class="hl" id="destaques"><div class="w"><ul>
+<li><svg viewBox="0 0 24 24"><path d="M5 9h11v5a5 5 0 0 1-10 0zM16 10h2a2 2 0 0 1 0 4h-2M8 3v2M12 3v2"/></svg>100% Café Especial</li>
+<li><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="6" ry="8" transform="rotate(30 12 12)"/><path d="M8 17c4-2 4-8 8-10"/></svg>Grãos selecionados</li>
+<li><svg viewBox="0 0 24 24"><path d="M3 15c0-5 4-9 9-9s9 4 9 9c-3 2-6 2-9 2s-6 0-9-2zM8 8l2 8M16 8l-2 8"/></svg>Produtos artesanais</li>
+<li><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.500-7 10-7 10z"/></svg>Ambiente acolhedor</li>
+</ul></div></div>
+
+<section id="historia"><div class="w two">
+<div class="md rv"><div class="a1 art" id="s1" role="img" aria-label="Interior aconchegante da cafeteria"></div><div class="a2 art" id="s2" role="img" aria-label="Café sendo preparado"></div></div>
+<div class="rv"><span class="eb">Nossa história</span><h2>Mais do que café. Um lugar para ficar.</h2>
+<p class="mut">O Café &amp; Cia nasceu da paixão por cafés especiais e da vontade de criar um espaço onde as pessoas pudessem conversar, trabalhar, estudar ou simplesmente aproveitar alguns minutos do dia.</p>
+<p class="mut">Desde o primeiro balcão, escolhemos grãos com cuidado, assamos receitas todos os dias e mantivemos a porta aberta para quem quer desacelerar.</p>
+<div class="sts"><div><b><span data-n="8">0</span></b><span>anos<br>de história</span></div><div><b><span data-n="40">0</span>+</b><span>receitas<br>autorais</span></div><div><b><span data-n="12">0</span></b><span>origens de<br>grãos</span></div></div>
+<a class="btn" href="#experiencia">Conheça nossa história</a></div>
+</div></section>
+
+<section class="mn" id="cardapio"><div class="w">
+<div class="hd2 rv"><span class="eb">Nosso cardápio</span><h2>Feito para despertar os sentidos.</h2></div>
+<div class="tabs" role="tablist" aria-label="Categorias" id="tabs"></div>
+<div class="grid" id="menu" role="tabpanel" aria-live="polite"></div>
+</div></section>
+
+<dialog id="pm" aria-labelledby="pn"><button class="x" data-close aria-label="Fechar">×</button><div class="mg"><div class="im art" id="pi"></div><div class="tx"><span class="eb" id="pc"></span><h3 id="pn" style="font-size:1.9rem"></h3><p class="mut" id="pd"></p><div class="tg"><span>Preparo na hora</span><span>Ingredientes selecionados</span></div><span class="pr" style="font-size:1.6rem;margin-bottom:16px" id="pp"></span><button class="btn" id="pa">Adicionar ao pedido</button></div></div></dialog>
+
+<section class="cd" id="cafe-do-dia"><div class="w two">
+<div class="sw rv"><div class="art" id="cdA" role="img" aria-label="Xícara de cappuccino"></div><div class="st" aria-hidden="true"><span></span><span></span><span></span></div></div>
+<div class="rv"><span class="bd">CAFÉ DO DIA</span><h2>Cappuccino Cremoso</h2>
+<p style="color:#eadbc3">Espresso duplo de grãos de torra média, leite vaporizado em textura de seda e uma camada generosa de espuma. Notas de chocolate e caramelo, finalizado com um toque de canela. Equilibrado, macio e perfeito para qualquer hora do dia.</p>
+<span class="pr">R$ 12,90</span><button class="btn" id="try">Quero experimentar</button></div>
+</div></section>
+
+<section id="experiencia"><div class="w">
+<div class="hd2 rv"><span class="eb">Experiência</span><h2>Por que ficar por aqui?</h2></div>
+<div class="cs">
+<article class="ex rv"><div class="ic">☕</div><h3>Café especial</h3><p>Grãos selecionados e preparados na hora.</p></article>
+<article class="ex rv"><div class="ic">🥐</div><h3>Produtos artesanais</h3><p>Receitas feitas com cuidado todos os dias.</p></article>
+<article class="ex rv"><div class="ic">💻</div><h3>Espaço confortável</h3><p>Um ambiente perfeito para trabalhar, estudar ou conversar.</p></article>
+<article class="ex rv"><div class="ic">🌿</div><h3>Ambiente acolhedor</h3><p>Um lugar para desacelerar.</p></article>
+</div></div></section>
+
+<section class="pc"><div class="w"><div class="hd2 rv" style="margin:0 auto"><span class="eb">Processo</span><h2>Do grão à xícara</h2></div>
+<ol class="rv"><li><b>01</b><h3>Seleção</h3><p>Escolhemos grãos de qualidade.</p></li><li><b>02</b><h3>Torra</h3><p>Cada lote recebe uma torra cuidadosamente controlada.</p></li><li><b>03</b><h3>Preparo</h3><p>O café é preparado na hora.</p></li><li><b>04</b><h3>Experiência</h3><p>Você aproveita o resultado.</p></li></ol></div></section>
+
+<section id="galeria"><div class="w"><div class="hd2 rv"><span class="eb">Galeria</span><h2>Detalhes que a gente ama.</h2></div><div class="gal rv" id="gal"></div></div></section>
+<dialog id="lb" aria-label="Galeria ampliada"><button class="x" data-close aria-label="Fechar">×</button><button class="nv p" aria-label="Anterior">‹</button><button class="nv n" aria-label="Próxima">›</button><div class="im art" id="lbi"></div><p id="lbc"></p></dialog>
+
+<section class="tt" style="background:var(--bg2)"><div class="w"><span class="eb">Depoimentos</span><h2>Quem passa por aqui, volta.</h2>
+<div class="tr" id="tr" tabindex="0" aria-label="Depoimentos"></div>
+<div class="dots"><button class="ar" id="tp" aria-label="Anterior">‹</button><span id="dt" style="display:flex;gap:10px;align-items:center"></span><button class="ar" id="tn" aria-label="Próximo">›</button></div></div></section>
+
+<section class="ig"><div class="w"><span class="eb">@cafeecia</span><h2>Um pouco do nosso dia a dia.</h2><p class="mut">Bastidores, receitas novas e o café de cada manhã.</p>
+<div class="grid6" id="ig"></div><a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener">Seguir no Instagram</a></div></section>
+
+<section id="contato"><div class="w two">
+<div class="rv"><span class="eb">Localização</span><h2>Encontre seu novo lugar favorito.</h2>
+<address style="font-style:normal" class="mut">Rua das Flores, 245<br>Centro • Curitiba - PR</address>
+<table class="hr"><caption class="eb" style="text-align:left;caption-side:top">Horários</caption><tr><td>Segunda a sexta</td><td>08h às 20h</td></tr><tr><td>Sábado</td><td>09h às 20h</td></tr><tr><td>Domingo</td><td>09h às 18h</td></tr></table>
+<p><a href="tel:+5541999999999" style="font-weight:600">(41) 99999-9999</a></p>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=Rua+das+Flores+245+Curitiba" target="_blank" rel="noopener">Como chegar</a></div>
+<div class="map rv" role="img" aria-label="Mapa estilizado: Rua das Flores, 245"><svg viewBox="0 0 500 420" preserveAspectRatio="xMidYMid slice"><rect width="500" height="420" fill="#eadbc3"/><g fill="#c9c48a"><rect x="30" y="40" width="130" height="90" rx="16"/><rect x="330" y="250" width="140" height="130" rx="16"/></g><g stroke="#faf3e7" stroke-width="16" stroke-linecap="round" fill="none"><path d="M0 200H500M250 0V420M0 340L500 90"/></g><g stroke="#faf3e7" stroke-width="8" fill="none"><path d="M0 100H500M120 0V420M400 0V420M0 300H500"/></g><text x="270" y="190" font-size="13" fill="#6d5646" font-family="sans-serif">Rua das Flores</text><g transform="translate(250 200)"><ellipse cy="4" rx="22" ry="7" fill="#0003"/><path d="M0 0C-26-26-26-58 0-58s26 32 0 58z" fill="#a45a1f"/><circle cy="-38" r="9" fill="#faf3e7"/></g></svg></div>
+</div></section>
+
+<section class="cta"><div class="art" id="ctaA" aria-hidden="true"></div><div class="w"><h2 style="font-size:clamp(2.2rem,5.5vw,4rem)">Tem sempre espaço para mais um café.</h2><p style="color:#eadbc3;max-width:520px;margin:0 auto 28px">Venha conhecer nosso espaço, experimentar nossos cafés e aproveitar o momento.</p><div class="bs"><a class="btn" href="#cardapio">Ver cardápio</a><a class="btn o" href="https://www.google.com/maps/search/?api=1&query=Rua+das+Flores+245+Curitiba" target="_blank" rel="noopener">Como chegar</a></div></div></section>
+</main>
+<footer><div class="w"><div class="fg">
+<div><a class="logo" href="#inicio" style="color:#faf3e7">CAFÉ <b>&amp;</b> CIA</a><p style="margin-top:12px;max-width:300px">Café especial, comida artesanal e bons momentos.</p></div>
+<div><h4>Links</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#cardapio">Cardápio</a></li><li><a href="#historia">Nossa história</a></li><li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li><li><a href="#contato">Contato</a></li></ul></div>
+<div><h4>Visite</h4><p>Rua das Flores, 245<br>Curitiba - PR<br>(41) 99999-9999</p></div></div>
+<div class="cp">© 2026 Café &amp; Cia. Todos os direitos reservados.</div></div></footer>
+<div class="toast" id="ts" role="status"></div>
+<script>
+document.documentElement.classList.add('js');
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+/* Ilustrações SVG (troque por fotos reais no projeto final) */
+let n=0;
+const PAL={cup:['#3b2314','#b8763a'],beans:['#22140d','#5b3a22'],pastry:['#c98d4a','#f0d3a0'],sweet:['#4a2a1c','#d99a5b'],room:['#efe0c6','#c9a26b'],green:['#4f5c2a','#b9c08a'],warm:['#7a4525','#e8b27a']};
+function art(k,c,alt){const i='g'+n++,[a,b]=PAL[c||k],D=`<defs><linearGradient id="${i}" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs><rect width="400" height="300" fill="url(#${i})"/>`;let s='';
+if(k=='cup')s='<ellipse cx="200" cy="238" rx="115" ry="18" fill="#fff3"/><path d="M118 128h164v52a82 72 0 0 1-164 0z" fill="#f7efe2"/><ellipse cx="200" cy="128" rx="82" ry="16" fill="#6b3d1e"/><ellipse cx="200" cy="128" rx="52" ry="9" fill="#d29a5c"/><path d="M282 142q42 4 26 40q-10 16-36 16" fill="none" stroke="#f7efe2" stroke-width="12"/>';
+else if(k=='beans')for(let j=0;j<18;j++)s+=`<g transform="translate(${(j*97)%380+15} ${(j*61)%270+15}) rotate(${j*37})"><ellipse rx="30" ry="19" fill="${j%3?'#3b2314':'#55331d'}"/><path d="M-24 0q24-9 48 0" stroke="#9a6a40" fill="none" stroke-width="3"/></g>`;
+else if(k=='pastry'){s='<ellipse cx="200" cy="228" rx="130" ry="20" fill="#fff4"/>';for(let j=-2;j<=2;j++)s+=`<ellipse cx="${200+j*44}" cy="${180-(2-Math.abs(j))*12}" rx="36" ry="${58-Math.abs(j)*9}" transform="rotate(${j*15} ${200+j*44} 200)" fill="#d8a04f" stroke="#a9702a" stroke-width="3"/>`}
+else if(k=='sweet')s='<ellipse cx="200" cy="238" rx="125" ry="18" fill="#fff4"/><rect x="105" y="170" width="190" height="56" rx="10" fill="#3d2216"/><rect x="105" y="140" width="190" height="30" fill="#f3dcae"/><rect x="105" y="110" width="190" height="30" rx="10" fill="#5a3320"/><circle cx="200" cy="96" r="14" fill="#a3302a"/>';
+else s='<rect x="60" y="34" width="120" height="170" rx="60 60 6 6" fill="#fff6" stroke="#fff9" stroke-width="6"/><path d="M120 34v170M60 110h120" stroke="#fff9" stroke-width="4"/><g stroke="#5a3320" stroke-width="3"><path d="M250 0v50M330 0v70"/></g><path d="M225 50a25 25 0 0 1 50 0zM305 70a25 25 0 0 1 50 0z" fill="#f2c56c"/><rect x="0" y="236" width="400" height="64" fill="#5a3320"/><rect x="230" y="200" width="130" height="10" rx="5" fill="#3d2216"/><path d="M290 200v36" stroke="#3d2216" stroke-width="8"/><path d="M40 236c-6-30 4-46 14-56 10 10 20 26 14 56z" fill="#5f6d2f"/>';
+return `<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" ${alt?`role="img" aria-label="${alt}"`:'aria-hidden="true"'}>${D}${s}</svg>`}
+const put=(id,k,c,alt)=>{const e=$('#'+id);e.innerHTML=art(k,c,alt)};
+put('heroArt','cup','cup');put('s1','room');put('s2','cup','warm');put('cdA','cup','warm');put('ctaA','beans');
+/* Header + menu mobile */
+const hd=$('#hd'),bg=$('#bg');
+addEventListener('scroll',()=>hd.classList.toggle('s',scrollY>40),{passive:true});
+const tog=o=>{hd.classList.toggle('open',o);bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');document.body.style.overflow=o?'hidden':''};
+bg.onclick=()=>tog(!hd.classList.contains('open'));
+$$('#mn a').forEach(a=>a.onclick=()=>tog(false));
+addEventListener('keydown',e=>{if(e.key=='Escape')tog(false)});
+/* Cardápio */
+const M={
+'Cafés':[['Espresso',7.9,'Intenso, encorpado e com crema dourada.','cup','cup'],['Cappuccino',12.9,'Espresso, leite vaporizado e espuma cremosa.','cup','warm'],['Latte',14.9,'Leite macio com um toque suave de café.','cup','sweet'],['Mocha',15.9,'Café, chocolate e leite em harmonia.','cup','beans'],['Cold Brew',16.9,'Extração a frio por 18 horas, servido com gelo.','cup','green'],['Affogato',17.9,'Sorvete de baunilha afogado em espresso quente.','cup','room']],
+'Bebidas':[['Chocolate quente',14.9,'Chocolate belga cremoso com chantilly.','cup','sweet'],['Chá artesanal',11.9,'Blend de ervas e frutas, servido no bule.','cup','green'],['Limonada suíça',12.9,'Limão siciliano, hortelã e um toque de mel.','cup','room'],['Suco natural',13.9,'Frutas frescas espremidas na hora.','cup','warm']],
+'Doces':[['Brownie artesanal',12.9,'Chocolate meio amargo, casquinha crocante.','sweet','sweet'],['Cheesecake',16.9,'Base crocante e calda de frutas vermelhas.','sweet','warm'],['Cookie artesanal',9.9,'Macio por dentro, com gotas de chocolate.','sweet','pastry'],['Torta de chocolate',15.9,'Massa amanteigada e ganache aveludada.','sweet','beans']],
+'Salgados':[['Croissant',13.9,'Folhado amanteigado, assado todas as manhãs.','pastry','pastry'],['Pão de queijo',8.9,'Mineirinho quentinho, casquinha crocante.','pastry','warm'],['Sanduíche artesanal',19.9,'Pão de fermentação natural, queijo e peito de peru.','pastry','green'],['Quiche',17.9,'Massa fina, ovos, queijo e ervas frescas.','pastry','room']],
+'Brunch':[['Brunch clássico',42.9,'Pães, ovos, frutas, iogurte e café à vontade.','pastry','green'],['Ovos mexidos',24.9,'Cremosos, com torrada de fermentação natural.','pastry','warm'],['Panqueca de frutas',22.9,'Panquecas fofas com frutas e mel.','sweet','pastry']]};
+const R=p=>'R$ '+p.toFixed(2).replace('.',',');
+const tabs=$('#tabs'),grid=$('#menu');let cur='Cafés';
+function show(c){cur=c;$$('#tabs button').forEach(b=>{const on=b.dataset.c==c;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1});
+grid.innerHTML='';M[c].forEach((p,i)=>{const b=document.createElement('button');b.className='card';b.setAttribute('aria-label',`Ver detalhes: ${p[0]}, ${R(p[1])}`);
+b.innerHTML=`<div class="im">${art(p[3],p[4])}</div><div class="b"><h3>${p[0]}</h3><p>${p[2]}</p><div class="f"><span class="pr">${R(p[1])}</span><span class="pl" aria-hidden="true">+</span></div></div>`;
+b.onclick=()=>prod(p,c);grid.append(b)})}
+Object.keys(M).forEach(c=>{const b=document.createElement('button');b.textContent=c;b.dataset.c=c;b.role='tab';b.onclick=()=>show(c);
+b.onkeydown=e=>{const k=Object.keys(M),i=k.indexOf(c=b.dataset.c);const j=e.key=='ArrowRight'?i+1:e.key=='ArrowLeft'?i-1:null;if(j!=null){const t=k[(j+k.length)%k.length];show(t);$(`#tabs [data-c="${t}"]`).focus()}};tabs.append(b)});
+show(cur);
+/* Modais */
+const pm=$('#pm'),lb=$('#lb');let last;
+$$('dialog').forEach(d=>{d.addEventListener('click',e=>{if(e.target==d||e.target.dataset.close!=null)d.close()});d.addEventListener('close',()=>last&&last.focus())});
+function prod(p,c){last=document.activeElement;$('#pi').innerHTML=art(p[3],p[4],p[0]);$('#pc').textContent=c;$('#pn').textContent=p[0];$('#pd').textContent=p[2]+' Feito com ingredientes selecionados e preparado no momento do pedido.';$('#pp').textContent=R(p[1]);$('#pa').onclick=()=>{pm.close();toast(p[0]+' adicionado ao pedido')};pm.showModal()}
+$('#try').onclick=()=>toast('Cappuccino Cremoso reservado para você ☕');
+let tm;function toast(t){const e=$('#ts');e.textContent=t;e.classList.add('on');clearTimeout(tm);tm=setTimeout(()=>e.classList.remove('on'),2600)}
+/* Galeria + lightbox */
+const G=[['room','','a','Interior da cafeteria'],['cup','warm','','Café recém-preparado'],['beans','','b','Grãos selecionados'],['cup','sweet','','Latte art do barista'],['pastry','','a','Croissants assados na hora'],['sweet','','b','Doces artesanais'],['room','green','','Cantinho com plantas'],['cup','room','','Amigos tomando café']];
+const gal=$('#gal'),Z='<span class="zm"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span>';let li=0;
+G.forEach((g,i)=>{const b=document.createElement('button');b.className=g[2];b.setAttribute('aria-label','Ampliar: '+g[3]);b.innerHTML=art(g[0],g[1]||g[0])+Z;b.onclick=()=>{last=b;open(i);lb.showModal()};gal.append(b)});
+function open(i){li=(i+G.length)%G.length;const g=G[li];$('#lbi').innerHTML=art(g[0],g[1]||g[0],g[3]);$('#lbc').textContent=`${g[3]} — ${li+1}/${G.length}`}
+lb.querySelector('.p').onclick=()=>open(li-1);lb.querySelector('.n').onclick=()=>open(li+1);
+lb.addEventListener('keydown',e=>{if(e.key=='ArrowLeft')open(li-1);if(e.key=='ArrowRight')open(li+1)});
+/* Instagram */
+const IG=[['cup','warm'],['pastry'],['beans'],['sweet'],['room'],['cup','sweet']];
+$('#ig').innerHTML=IG.map(g=>`<a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Ver no Instagram">${art(g[0],g[1]||g[0])}<span class="zm"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r=".8"/></svg></span></a>`).join('');
+/* Depoimentos */
+const T=[['Marina S.','Ambiente incrível, café muito bom e os doces são absurdamente gostosos.','#a45a1f'],['Rafael T.','Meu escritório favorito: wi-fi bom, cadeiras confortáveis e um cappuccino perfeito.','#5f6d2f'],['Camila O.','O croissant sai quentinho e o atendimento é sempre simpático. Virei cliente fiel.','#7a4525'],['João P.','Cold brew fantástico! Lugar lindo para conversar sem pressa com os amigos.','#c9a14a']];
+const tr=$('#tr'),dt=$('#dt');
+tr.innerHTML=T.map(t=>`<figure><div class="tq"><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“${t[1]}”</blockquote><figcaption class="au"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" fill="${t[2]}"/><text x="24" y="31" text-anchor="middle" font-size="20" fill="#fff" font-family="Georgia">${t[0][0]}</text></svg>${t[0]}</figcaption></div></figure>`).join('');
+T.forEach((_,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','Depoimento '+(i+1));b.onclick=()=>go(i);dt.append(b)});
+let ti=0,hold=0;
+const go=i=>{ti=(i+T.length)%T.length;tr.scrollTo({left:ti*tr.clientWidth,behavior:'smooth'})};
+tr.addEventListener('scroll',()=>{ti=Math.round(tr.scrollLeft/tr.clientWidth);[...dt.children].forEach((b,j)=>b.setAttribute('aria-current',j==ti))},{passive:true});
+$('#tp').onclick=()=>go(ti-1);$('#tn').onclick=()=>go(ti+1);
+['pointerenter','focusin','touchstart'].forEach(e=>tr.addEventListener(e,()=>hold=1,{passive:true}));['pointerleave','focusout','touchend'].forEach(e=>tr.addEventListener(e,()=>hold=0,{passive:true}));
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches)setInterval(()=>{if(!hold&&!document.hidden)go(ti+1)},5000);
+dt.children[0].setAttribute('aria-current',true);
+/* Reveal + contadores */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target)}),{threshold:.15});
+$$('.rv').forEach((e,i)=>{e.style.transitionDelay=(i%4)*70+'ms';io.observe(e)});
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,t=+el.dataset.n,s=performance.now();co.unobserve(el);
+(function f(now){const p=Math.min((now-s)/1200,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(s)}),{threshold:.6});
+$$('[data-n]').forEach(e=>co.observe(e));
+</script>
+</body>
+</html>
